@@ -42,7 +42,7 @@ export default function Certifications() {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await fetch("/api/list-certificates");
+        const response = await fetch("/api/list_certificates_google");
         const images = await response.json();
         setCertificationsCloud(images.map(img => ({ title: img.split("/").pop(), image: img, type: "Google Cloud" })));
       } catch (error) {
@@ -55,6 +55,15 @@ export default function Certifications() {
 
   return (
     <div className="relative min-h-screen bg-[#FDFDFD] flex flex-col items-center py-10 px-4">
+    <div className="absolute top-0 left-0 w-full h-1/5 bg-blue-300 z-0">
+  <svg className="absolute bottom-0 w-full" viewBox="0 0 1440 320">
+    <path fill="#2563EB" d="M0,224L60,208C120,192,240,160,360,154.7C480,149,600,171,720,186.7C840,203,960,213,1080,208C1200,203,1320,181,1380,170.7L1440,160V320H0Z"></path>
+  </svg>
+</div>
+
+
+
+
       <div className="absolute left-0 top-1/4 flex justify-center items-center z-0">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +135,7 @@ export default function Certifications() {
         <p className="text-5xl font-bold drop-shadow-lg">Certificados</p>
         <p className="drop-shadow-lg">
           Esses são os certificados que adquiri ao longo da minha jornada como
-          desenvolvedor
+          desenvolvedora
         </p>
       </div>
 
@@ -137,7 +146,7 @@ export default function Certifications() {
       >
         {Object.entries(groupedCertifications).map(([type, certs]) => (
           <div key={type} className="mb-10">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6 z-10">
               {certs.map((cert, index) => (
                 <div
                   key={index}
@@ -166,15 +175,15 @@ export default function Certifications() {
         </svg>
       </div>
       {/* Exibir certificados do Google Cloud agrupados por tipo */}
-      <div className="w-full max-w-4xl">
+      <div className="w-full max-w-4xl z-10eventoLattes">
       <h2 className="text-2xl font-bold text-gray-800 capitalize mb-4">
         Certificados Google Cloud
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {certificationsCloud.map((cert, index) => (
           <div key={index} className="bg-white rounded-lg shadow-lg flex flex-col items-center">
-            <img src={cert.image} alt={cert.title} className="h-40 w-full object-cover rounded-md" />
-            <p className="text-gray-700">{cert.title}</p>
+            <img src={cert.image} alt={cert.title} className="h-80 w-full object-cover rounded-md" />
+           
           </div>
         ))}
       </div>
