@@ -6,19 +6,43 @@ import { useRouter } from "next/navigation"; // Para navegação no Next.js
 const certifications = [
   {
     title: "Escultura Digital com Blender",
-    image: "/img/eu.png",
+    image: "/certifications/programming/reactProject.jpg",
     type: "Java",
     description: "Nesse curso",
   },
   {
     title: "React Avançado",
-    image: "/certificados/react.webp",
+    image: "/certifications/programming/oracleData.jpg",
     type: "React",
     description: "Esse foi um dos cursos em que mais adquiri conhecimento em desenvolvimento full stack. Nele, consegui criar um sistema para uma pizzaria, abrangendo todo o fluxo necessário para o restaurante, desde o garçom realizando o pedido pelo celular até a cozinha recebê-lo e notificar quando estiver pronto.",
   },
   {
     title: "Desenvolvimento de Jogos com Unity",
-    image: "/certificados/unity.webp",
+    image: "/certifications/programming/oracleCloud.jpg",
+    type: "Estrutura de Dados",
+    description: "aaa",
+  },
+  {
+    title: "Escultura Digital com Blender",
+    image: "/certifications/programming/maratonaProgramacao.jpg",
+    type: "Java",
+    description: "Nesse curso",
+  },
+  {
+    title: "React Avançado",
+    image: "/certifications/programming/java.jpg",
+    type: "React",
+    description: "Esse foi um dos cursos em que mais adquiri conhecimento em desenvolvimento full stack. Nele, consegui criar um sistema para uma pizzaria, abrangendo todo o fluxo necessário para o restaurante, desde o garçom realizando o pedido pelo celular até a cozinha recebê-lo e notificar quando estiver pronto.",
+  },
+  {
+    title: "Desenvolvimento de Jogos com Unity",
+    image: "/certifications/programming/hackathon2024.jpg",
+    type: "Estrutura de Dados",
+    description: "aaa",
+  },
+  {
+    title: "Desenvolvimento de Jogos com Unity",
+    image: "/certifications/programming/eventoLattes.jpg",
     type: "Estrutura de Dados",
     description: "aaa",
   },
