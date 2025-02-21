@@ -78,17 +78,20 @@ export default function Certifications() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#FDFDFD] flex flex-col items-center py-10 px-4">
-    <div className="absolute top-0 left-0 w-full h-1/5 bg-blue-300 z-0">
+    <div className="relative min-h-screen bg-blue-300 flex flex-col items-center py-10 px-4 ">
+        <div className="absolute top-0 left-0 w-full h-1/4 bg-white z-10">
+  <svg className="absolute bottom-0 w-full" viewBox="0 0 1440 320">
+    <path fill="#2563EB" d="M0,224L60,208C120,192,240,160,360,154.7C480,149,600,171,720,186.7C840,203,960,213,1080,208C1200,203,1320,181,1380,170.7L1440,160V320H0Z"></path>
+  </svg>
+</div>
+    <div className="absolute top-0 left-0 w-full h-1/2 bg-blue-300 z-0">
   <svg className="absolute bottom-0 w-full" viewBox="0 0 1440 320">
     <path fill="#2563EB" d="M0,224L60,208C120,192,240,160,360,154.7C480,149,600,171,720,186.7C840,203,960,213,1080,208C1200,203,1320,181,1380,170.7L1440,160V320H0Z"></path>
   </svg>
 </div>
 
 
-
-
-      <div className="absolute left-0 top-1/4 flex justify-center items-center z-0">
+      <div className="absolute left-0 top-0 flex justify-center items-center z-10">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -106,7 +109,7 @@ export default function Certifications() {
         </svg>
       </div>
 
-      <div className="absolute right-0 top-1/4 flex justify-center items-center z-0">
+      <div className="absolute right-0 top-1 flex justify-center items-center z-10">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -123,7 +126,7 @@ export default function Certifications() {
           />
         </svg>
       </div>
-      <div className="absolute top-10 left-10 p-4 z-1">
+      <div className="absolute top-10 left-10 p-4 z-10">
         <button
           onClick={() => router.back()}
           className="text-gray-700 hover:text-gray-900"
