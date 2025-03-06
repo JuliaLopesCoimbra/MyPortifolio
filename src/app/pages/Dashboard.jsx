@@ -31,17 +31,17 @@ export default function Dashboard() {
                               src="././avatar/certificacoes.webp"
                               className="h-full w-full object-cover object-center"
                             />
-                            <p className="text-black mt-2">Certificações</p>
+                            <p className="text-black  text-center mt-2 hover:text-purple-500">Certificações</p>
                           </a>
                         </div>
                         <div className="flex flex-col items-center h-64 w-44 overflow-hidden rounded-lg">
-                          <a href="/education">
+                          <a href="/pages/education">
                             <img
                               alt=""
                               src="././avatar/educacao.webp"
                               className="h-full w-full object-cover object-center"
                             />
-                            <p className="text-black mt-2">Educação</p>
+                            <p className="text-black text-center mt-2 hover:text-purple-500">Educação</p>
                           </a>
                         </div>
                       </div>
@@ -54,7 +54,7 @@ export default function Dashboard() {
                               src="././avatar/projetos.webp"
                               className="h-full w-full object-cover object-center"
                             />
-                            <p className="text-black mt-2">Projetos</p>
+                            <p className="text-black text-center mt-2 hover:text-purple-500">Projetos</p>
                           </a>
                         </div>
                       </div>
@@ -67,7 +67,7 @@ export default function Dashboard() {
                               src="././avatar/profissional.webp"
                               className="h-full w-full object-cover object-center"
                             />
-                            <p className="text-black mt-2">Profissional</p>
+                            <p className="text-black text-center mt-2 hover:text-purple-500">Profissional</p>
                           </a>
                         </div>
                         <div className="flex flex-col items-center h-64 w-44 overflow-hidden rounded-lg">
@@ -77,7 +77,7 @@ export default function Dashboard() {
                               src="././avatar/dificil.webp"
                               className="h-full w-full object-cover object-center"
                             />
-                            <p className="text-black mt-2">Desafios</p>
+                            <p className="text-black text-center mt-2 hover:text-purple-500">Desafios</p>
                           </a>
                         </div>
                       </div>

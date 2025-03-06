@@ -2,49 +2,45 @@
 
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation"; // Para navegação no Next.js
+import Header from "../Header";
 
 const certifications = [
   {
-    title: "Escultura Digital com Blender",
+    title: "",
     image: "/certifications/programming/reactProject.jpg",
     type: "Java",
-    description: "Nesse curso",
+    description: "No contexto de um curso intensivo de desenvolvimento full stack, tive a oportunidade de realizar um projeto: a criação de um sistema integrado para uma pizzaria. O objetivo era otimizar o processo de pedidos e entrega, melhorando a comunicação entre os garçons e a equipe de cozinha. Utilizei React Native para desenvolver o aplicativo utilizado pelos garçons. Este aplicativo permitia que eles registrassem os pedidos dos clientes de forma rápida e eficiente, enviando-os diretamente para um dashboard operado pela cozinha, desenvolvido em React. O dashboard exibia os pedidos em tempo real, permitindo que a equipe de cozinha gerenciasse de maneira eficaz as demandas e informasse quando os pratos estavam prontos para serem servidos. No backend, optei por Node.js para gerenciar a lógica de negócios e a comunicação entre o frontend e o banco de dados. Esta escolha foi crucial para garantir uma transmissão de dados rápida e segura. Para o gerenciamento dos dados, implementei um banco de dados usando Postbird, acessado através da plataforma Beekeeper. Essa configuração foi essencial para manter a organização dos dados de pedidos e a eficiência operacional do sistema.",
   },
   {
-    title: "React Avançado",
+    title: "",
     image: "/certifications/programming/oracleData.jpg",
     type: "React",
-    description: "Esse foi um dos cursos em que mais adquiri conhecimento em desenvolvimento full stack. Nele, consegui criar um sistema para uma pizzaria, abrangendo todo o fluxo necessário para o restaurante, desde o garçom realizando o pedido pelo celular até a cozinha recebê-lo e notificar quando estiver pronto.",
+    description: "Ao longo do segundo semestre de 2024, mergulhei profundamente nos conceitos e práticas essenciais de SQL e PL/SQL, explorando as capacidades avançadas do Oracle Database. O curso abordou desde a criação e gestão de bancos de dados até técnicas sofisticadas de manipulação e recuperação de dados, preparando-me para enfrentar problemas reais de banco de dados com eficiência e confiança.",
   },
+
   {
-    title: "Desenvolvimento de Jogos com Unity",
-    image: "/certifications/programming/oracleCloud.jpg",
-    type: "Estrutura de Dados",
-    description: "aaa",
-  },
-  {
-    title: "Escultura Digital com Blender",
+    title: "",
     image: "/certifications/programming/maratonaProgramacao.jpg",
     type: "Java",
-    description: "Nesse curso",
+    description: "A maratona consistiu em uma série de problemas de programação que variavam em dificuldade, abrangendo algoritmos, estruturas de dados, matemática e lógica. Cada desafio tinha como objetivo testar nossa capacidade de pensar de forma crítica e desenvolver soluções eficientes em um curto período de tempo.",
   },
   {
-    title: "React Avançado",
+    title: "",
     image: "/certifications/programming/java.jpg",
     type: "React",
-    description: "Esse foi um dos cursos em que mais adquiri conhecimento em desenvolvimento full stack. Nele, consegui criar um sistema para uma pizzaria, abrangendo todo o fluxo necessário para o restaurante, desde o garçom realizando o pedido pelo celular até a cozinha recebê-lo e notificar quando estiver pronto.",
+    description: "Durante o curso, explorei extensivamente os fundamentos de JAVA, incluindo sintaxe, controle de fluxo, orientação a objetos, e manipulação de exceções. A metodologia de ensino da Rocketseat, focada em prática e aplicação real, permitiu que eu não apenas aprendesse a teoria, mas também aplicasse o conhecimento em projetos práticos e desafios de codificação.",
   },
   {
-    title: "Desenvolvimento de Jogos com Unity",
+    title: "",
     image: "/certifications/programming/hackathon2024.jpg",
     type: "Estrutura de Dados",
-    description: "aaa",
+    description: "Tive o privilégio de participar do Hackathon de 2024 organizado pelo Centro Universitário de Franca - UNIFACEF, um evento que reuniu mentes criativas para solucionar desafios contemporâneos usando a tecnologia. O tema do nosso projeto foi particularmente inovador e desafiador: como auxiliar o usuário a medir sua felicidade e orientá-lo sobre práticas que ajudem na sensação de felicidade.Nosso objetivo era criar uma ferramenta capaz de coletar dados relevantes sobre o bem-estar e a felicidade das pessoas, incorporando variáveis socioeconômicas que pudessem influenciar esses indicadores. O questionário foi projetado para ser intuitivo e acessível, facilitando a participação de uma ampla demografia.Utilizamos tecnologias avançadas para garantir a análise precisa dos dados coletados, empregando algoritmos de inteligência artificial para interpretar as respostas e gerar insights significativos. A plataforma foi desenvolvida com a intenção de ser adquirida e utilizada por instituições de saúde, que poderiam empregar essas informações para fomentar crescimento científico e desenvolver políticas mais eficazes voltadas à saúde mental e bem-estar da população.Trabalhar em equipe sob a pressão de um hackathon foi uma experiência intensamente gratificante e educativa. A colaboração entre os membros da equipe foi fundamental para moldar nossa solução final, combinando conhecimento técnico com perspectivas criativas para abordar o desafio de forma holística.",
   },
   {
-    title: "Desenvolvimento de Jogos com Unity",
+    title: "",
     image: "/certifications/programming/eventoLattes.jpg",
     type: "Estrutura de Dados",
-    description: "aaa",
+    description: "O workshop focou em estratégias eficazes para estruturar e destacar informações no Currículo Lattes, uma ferramenta indispensável para acadêmicos, cientistas e estudantes no Brasil. Aprendi a organizar minhas qualificações, projetos de pesquisa, publicações e participações em congressos de maneira que reflita verdadeiramente meu percurso acadêmico e minhas contribuições para a área de conhecimento",
   },
 ];
 
@@ -59,9 +55,9 @@ const groupByType = (certs) => {
 
 export default function Certifications() {
   const router = useRouter();
+  const [showHeader, setShowHeader] = useState(false);
   const [certificationsCloud, setCertificationsCloud] = useState([]);
   const groupedCertifications = groupByType(certifications);
-
   // Buscar imagens da API
   useEffect(() => {
     const fetchImages = async () => {
@@ -76,27 +72,25 @@ export default function Certifications() {
 
     fetchImages();
   }, []);
+  useEffect(() => {
+    setShowHeader(true);
+  }, []);
 
   return (
-    <div className="relative min-h-screen bg-blue-300 flex flex-col items-center py-10 px-4 ">
-        <div className="absolute top-0 left-0 w-full h-1/4 bg-white z-10">
-  <svg className="absolute bottom-0 w-full" viewBox="0 0 1440 320">
-    <path fill="#2563EB" d="M0,224L60,208C120,192,240,160,360,154.7C480,149,600,171,720,186.7C840,203,960,213,1080,208C1200,203,1320,181,1380,170.7L1440,160V320H0Z"></path>
-  </svg>
-</div>
-    <div className="absolute top-0 left-0 w-full h-1/2 bg-blue-300 z-0">
-  <svg className="absolute bottom-0 w-full" viewBox="0 0 1440 320">
-    <path fill="#2563EB" d="M0,224L60,208C120,192,240,160,360,154.7C480,149,600,171,720,186.7C840,203,960,213,1080,208C1200,203,1320,181,1380,170.7L1440,160V320H0Z"></path>
-  </svg>
-</div>
-
-
+  
+    <div className="relative min-h-screen bg-white flex flex-col items-center  px-4 ">
+        {/* <Header showHeader={showHeader}/> */}
+      <div className="absolute top-0 left-0 w-full h-[900px] bg-white z-10">
+        <svg className="absolute  bottom-0 w-full" viewBox="0 0 1440 320">
+          <path fill="#2563EB" d="M0,224L60,208C120,192,240,160,360,154.7C480,149,600,171,720,186.7C840,203,960,213,1080,208C1200,203,1320,181,1380,170.7L1440,160V320H0Z"></path>
+        </svg>
+      </div>
       <div className="absolute left-0 top-0 flex justify-center items-center z-10">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="yellow"
-          className="w-[500px] h-[500px]"
+          className="w-[500px] h-[900px]"
         >
           <path d="M12 2L14 6L18 7L14 8L12 12L10 8L6 7L10 6L12 2Z" />
           <path d="M12 14L14 18L18 19L14 20L12 22L10 20L6 19L10 18L12 14Z" />
@@ -114,7 +108,7 @@ export default function Certifications() {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="yellow"
-          className="w-[500px] h-[500px]"
+          className="w-[500px] h-[900px]"
         >
           <path d="M12 2L14 6L18 7L14 8L12 12L10 8L6 7L10 6L12 2Z" />
           <path d="M12 14L14 18L18 19L14 20L12 22L10 20L6 19L10 18L12 14Z" />
@@ -169,7 +163,7 @@ export default function Certifications() {
       {/* Exibir certificados gerais agrupados por tipo */}
       <div
         className="w-full max-w-4xl z-10"
-        // style={{ border: "1px solid red" }}
+      // style={{ border: "1px solid red" }}
       >
         {Object.entries(groupedCertifications).map(([type, certs]) => (
           <div key={type} className="mb-10">
@@ -182,13 +176,17 @@ export default function Certifications() {
                   <img
                     src={cert.image}
                     alt={cert.title}
-                    className="h-40 w-full object-cover rounded-md"
+                    className="h-100 w-full object-cover rounded-md"
                   />
-                  <div className="text-gray-700"> {cert.description}</div>
+                  <div className="p-4 text-center text-gray-700">
+                    <h3 className="font-semibold text-lg">{cert.title}</h3>
+                    <p className="text-sm">{cert.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
+
         ))}
       </div>
       <div className="absolute   flex justify-center items-center z-0">
@@ -203,17 +201,17 @@ export default function Certifications() {
       </div>
       {/* Exibir certificados do Google Cloud agrupados por tipo */}
       <div className="w-full max-w-4xl z-10eventoLattes">
-      <h2 className="text-2xl font-bold text-gray-800 capitalize mb-4">
-        Certificados Google Cloud
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {certificationsCloud.map((cert, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-lg flex flex-col items-center">
-            <img src={cert.image} alt={cert.title} className="h-80 w-full object-cover rounded-md" />
-           
-          </div>
-        ))}
-      </div>
+        <h2 className="text-2xl font-bold text-gray-800 capitalize mb-4">
+          Certificados Google Cloud
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {certificationsCloud.map((cert, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-lg flex flex-col items-center">
+              <img src={cert.image} alt={cert.title} className="h-80 w-full object-cover rounded-md" />
+
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
