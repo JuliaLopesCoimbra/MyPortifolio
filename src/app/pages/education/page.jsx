@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation"; // Para navegação no Next.js
 export default function Education() {
   const router = useRouter();
   return (
-    <div className="bg-gray-50 py-24 sm:py-32">
+    <div className="bg-gray-100  sm:py-8" >
     
       <div className="absolute top-10 left-10 p-4 z-10">
         <button
@@ -27,7 +27,7 @@ export default function Education() {
           </svg>
         </button>
       </div>
-      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8" >
         <h2 className="text-center text-base/7 font-semibold text-indigo-600">
           high school
         </h2>
@@ -35,11 +35,11 @@ export default function Education() {
           Minha jornada de aprendizado
         </p>
         <div className="flex justify-center items-center relative z-10">
-        <div className="w-2/2 flex items-center justify-center">
+        <div className="w-2/2 flex items-center justify-center" >
           <img
             src="/avatar/sou1.webp"
             alt="Your Name"
-            className="max-w-full rounded-full"
+            className="max-w-xs rounded-full"
           />
         </div>
       </div>
