@@ -48,7 +48,7 @@ export default function Dashboard() {
 
                       <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                         <div className="flex flex-col items-center h-64 w-44 overflow-hidden rounded-lg">
-                          <a href="/projects">
+                          <a href="/pages/projects/dashboardWorld">
                             <img
                               alt=""
                               src="././avatar/projetos.webp"
