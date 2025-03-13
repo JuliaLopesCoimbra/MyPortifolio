@@ -253,13 +253,7 @@ export default function Education() {
         </div>
 
         
-        <div className="w-1/2 flex items-center justify-center">
-            <img
-              src="/avatar/avatar.webp"
-              alt="Your Name"
-              className="max-w-full rounded-full"
-            />
-          </div>
+      
       </div>
     </div>
   );

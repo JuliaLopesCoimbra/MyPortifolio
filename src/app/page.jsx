@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Header from "./pages/Header";
 import {About}  from "./pages/About";
 import Dashboard from "./pages/Dashboard";
+import Contact from "./pages/Contact";
 
 export default function Home() {
   const [showHeader, setShowHeader] = useState(false);
@@ -58,6 +59,9 @@ export default function Home() {
       </section>
       <section>
         <Dashboard />
+      </section>
+      <section>
+        <Contact />
       </section>
     </div>
   );
