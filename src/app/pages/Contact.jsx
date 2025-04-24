@@ -57,16 +57,16 @@ export default function Contact() {
 
   {/* Ícones das Redes Sociais */}
   <div className="mt-6 flex space-x-6">
-    <a href="https://www.instagram.com/seu_instagram" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.instagram.com/lccjuu/" target="_blank" rel="noopener noreferrer">
       <FaInstagram className="w-8 h-8 text-gray-600 hover:text-red-500 transition duration-300" />
     </a>
-    <a href="https://www.linkedin.com/in/seu_linkedin" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.linkedin.com/in/júlia-lopes-12648624a/" target="_blank" rel="noopener noreferrer">
       <FaLinkedin className="w-8 h-8 text-gray-600 hover:text-blue-600 transition duration-300" />
     </a>
-    <a href="https://github.com/seu_github" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/JuliaLopesCoimbra" target="_blank" rel="noopener noreferrer">
       <FaGithub className="w-8 h-8 text-gray-600 hover:text-black transition duration-300" />
     </a>
-    <a href="https://wa.me/seu_numero" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/+5516992848085" target="_blank" rel="noopener noreferrer">
       <FaWhatsapp className="w-8 h-8 text-gray-600 hover:text-green-500 transition duration-300" />
     </a>
   </div>

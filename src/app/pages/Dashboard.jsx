@@ -30,7 +30,7 @@ export default function Dashboard() {
                             <img
                               alt=""
                               src="././avatar/certificacoes.webp"
-                              className="h-full w-full object-cover object-center"
+                              className="h-full w-full object-cover object-center hover:bg-purple-100"
                             />
                             <p className="text-black  text-center mt-2 hover:text-purple-500">Certificações</p>
                           </a>
@@ -40,7 +40,7 @@ export default function Dashboard() {
                             <img
                               alt=""
                               src="././avatar/educacao.webp"
-                              className="h-full w-full object-cover object-center"
+                              className="h-full w-full object-cover object-center hover:bg-purple-100"
                             />
                             <p className="text-black text-center mt-2 hover:text-purple-500">Educação</p>
                           </a>
@@ -49,11 +49,11 @@ export default function Dashboard() {
 
                       <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                         <div className="flex flex-col items-center h-64 w-44 overflow-hidden rounded-lg">
-                          <a href="/pages/projects/dashboardWorld">
+                          <a href="/pages/projects">
                             <img
                               alt=""
                               src="././avatar/projetos.webp"
-                              className="h-full w-full object-cover object-center"
+                              className="h-full w-full object-cover object-center hover:bg-purple-100"
                             />
                             <p className="text-black text-center mt-2 hover:text-purple-500">Projetos</p>
                           </a>
@@ -66,7 +66,7 @@ export default function Dashboard() {
                             <img
                               alt=""
                               src="././avatar/profissional.webp"
-                              className="h-full w-full object-cover object-center"
+                              className="h-full w-full object-cover object-center hover:bg-purple-100"
                             />
                             <p className="text-black text-center mt-2 hover:text-purple-500">Profissional</p>
                           </a>
@@ -76,7 +76,7 @@ export default function Dashboard() {
                             <img
                               alt=""
                               src="././avatar/dificil.webp"
-                              className="h-full w-full object-cover object-center"
+                              className="h-full w-full object-cover object-center hover:bg-purple-100"
                             />
                             <p className="text-black text-center mt-2 hover:text-purple-500">Desafios</p>
                           </a>

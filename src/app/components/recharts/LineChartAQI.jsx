@@ -7,7 +7,7 @@ const LineChartAQI = () => {
   const [airQualityData, setAirQualityData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const token = "e3cd9fb1d143eee80c4fef1af9d9846ebdd63dce";  // Substitua por seu token real
+  const token = "e3cd9fb1d143eee80c4fef1af9d9846ebdd63dce";
 
   useEffect(() => {
     const cities = ['Tokyo', 'Delhi', 'Shanghai', 'Sao Paulo', 'Mexico City', 'Cairo', 'Mumbai', 'Beijing', 'Dhaka', 'Osaka'];
@@ -20,11 +20,9 @@ const LineChartAQI = () => {
         );
         const data = responses.map((response, index) => ({
           name: cities[index],
-          aqi: response.data.data.aqi  // Obtem o índice de qualidade do ar de cada cidade
+          aqi: response.data.data.aqi
         }));
-        console.log("a",data)
         setAirQualityData(data);
-        
       } catch (error) {
         setError(error.message);
       }
@@ -36,28 +34,31 @@ const LineChartAQI = () => {
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
-  console.log(airQualityData)
+
   return (
-    <ResponsiveContainer width="100%" height="300px">
-      <LineChart
-        width={500}
-        height={300}
-        data={airQualityData}
-        margin={{
-          top: 5,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Line type="monotone" dataKey="aqi" stroke="#8884d8" activeDot={{ r: 8 }} />
-      </LineChart>
-    </ResponsiveContainer>
+    <div className="w-full flex flex-col items-center mb-10">
+      <h2 className="text-6x1 font-semibold mb-4 text-center text-black">
+        Nível de Qualidade do Ar (AQI) nas 10 Maiores Cidades do Mundo
+      </h2>
+      <ResponsiveContainer width="100%" height={300}>
+        <LineChart
+          data={airQualityData}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line type="monotone" dataKey="aqi" stroke="#8884d8" activeDot={{ r: 8 }} />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
   );
 };
 
