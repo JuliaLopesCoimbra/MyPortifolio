@@ -101,8 +101,9 @@ export default function Projects() {
                     borderRadius: "8px",
                     padding: "1rem",
                     maxWidth: "480px",
-                    height: "22vh",
-                    backgroundImage: `url('/img/projects/${company.name}.jpg')`,
+                    height: "30vh",
+                    backgroundImage: `url('/img/projects/${company.name}.jpg'), url('/img/projects/default.jpg')`,
+
                     transition:
                       "transform .3s ease-in-out, filter .3s ease-in-out",
                   }}

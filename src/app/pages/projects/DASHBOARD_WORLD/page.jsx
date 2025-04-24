@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
-
 import RadarChartAQI from '../../../components/recharts/RadarChart';
 import LineChartAQI from 'src/app/components/recharts/LineChartAQI';
 import BarChartAQI from 'src/app/components/recharts/BarChart';
