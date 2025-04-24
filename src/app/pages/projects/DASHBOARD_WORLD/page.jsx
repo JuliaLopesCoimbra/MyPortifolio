@@ -72,7 +72,7 @@ const Example = () => {
           />
           <div className="absolute inset-0 bg-black bg-opacity-50 z-5"></div>{" "}
           {/* Conteúdo por cima */}
-          <div className="relative z-10 p-6">
+          <div className="relative z-5 p-6">
             <h1 className="text-4xl font-bold mb-2 text-white">DASHBOARD - Air Quality Programmatic</h1>
             <h2 className="text-2xl font-semibold mb-2 text-white">Saiba como está a atmosfera no mundo</h2>
             <h3 className="text-xl font-medium mb-4 text-white">Índice de Qualidade do Ar (AQI)</h3>
