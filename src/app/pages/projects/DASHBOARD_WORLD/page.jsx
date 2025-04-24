@@ -1,11 +1,11 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
-import RadarChartAQI from '../../../components/recharts/RadarChart';
-import LineChartAQI from 'src/app/components/recharts/LineChartAQI';
-import BarChartAQI from 'src/app/components/recharts/BarChart';
-import CityAlertCard from 'src/app/components/recharts/CityAlertCard';
-import AQIMap from 'src/app/components/AQIMap';
+// import RadarChartAQI from '../../../components/recharts/RadarChart';
+// import LineChartAQI from 'src/app/components/recharts/LineChartAQI';
+// import BarChartAQI from 'src/app/components/recharts/BarChart';
+// import CityAlertCard from 'src/app/components/recharts/CityAlertCard';
+// import AQIMap from 'src/app/components/AQIMap';
 import { useRouter } from "next/navigation"; // Para navegação no Next.js
 
 const cities = ['Tokyo', 'Delhi', 'Shanghai', 'Sao Paulo', 'Mexico City', 'Cairo', 'Mumbai', 'Beijing', 'Dhaka', 'Osaka'];
@@ -97,7 +97,7 @@ const Example = () => {
           // style={{ border: '1px red solid' }}
           >
 
-            <LineChartAQI />
+            {/* <LineChartAQI /> */}
 
           </div>
           <div className="md:col-span-1"
@@ -128,19 +128,19 @@ const Example = () => {
             <p className="text-sm text-gray-700 mb-2 ">
               Nivél de cada um dos poluentes em cada cidade:
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
               {cities.map((city) => (
                 <RadarChartAQI key={city} city={city} />
               ))}
-            </div>
-            <BarChartAQI />
+            </div> */}
+            {/* <BarChartAQI />
             <h3 className="text-xl font-bold text-black text-center my-4 mt-20">🌍 Alertas por Cidade</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4">
               {cityData.map((item) => (
                 <CityAlertCard key={item.city} city={item.city} aqi={item.aqi} />
               ))}
             </div>
-            <AQIMap />
+            <AQIMap /> */}
 
 
 
