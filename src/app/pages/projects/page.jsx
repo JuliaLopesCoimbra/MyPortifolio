@@ -48,6 +48,18 @@ export default function Projects() {
       description: "Vestuário e casa",
       contracted: true,
     },
+    {
+      name: "",
+      id: 6,
+      description: "Vestuário e casa",
+      contracted: false,
+    },
+    {
+      name: "",
+      id: 6,
+      description: "Vestuário e casa",
+      contracted: false,
+    },
   ];
   const handleClick = (company) => {
     if (!company.contracted) return; // Não faz nada se a empresa não estiver contratada
@@ -126,7 +138,7 @@ export default function Projects() {
                       className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-white text-xl"
                       style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
                     >
-                      Contratar
+                      Em breve
                     </div>
                   )}
                 </motion.div>

@@ -41,7 +41,7 @@ const Example = () => {
       <div className="absolute top-10 left-10 p-4 z-10">
         <button
           onClick={() => router.back()}
-          className="text-white hover:text-blue-900"
+          className="text-white hover:text-purple-500"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
