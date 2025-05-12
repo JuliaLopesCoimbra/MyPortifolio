@@ -6,6 +6,7 @@ export default function BHProject() {
     const router = useRouter();
     return (
         <div className="flex min-h-screen flex-col items-center justify-center bg-white p-8" >
+            
             <div className="fixed inset-0 z-0 overflow-hidden h-full w-full">
 
                 <svg
@@ -27,7 +28,8 @@ export default function BHProject() {
                     <rect width="100%" height="100%" strokeWidth={0} fill="url(#grid-pattern)" />
                 </svg>
             </div>
-            <div className="absolute top-10 left-10 p-4 z-10">
+            
+            <div className="absolute top-10 left-0 p-4 z-10">
                 <button
                     onClick={() => router.back()}
                     className="text-black hover:text-purple-500"
@@ -48,6 +50,7 @@ export default function BHProject() {
                     </svg>
                 </button>
             </div>
+            
             <h1 className="text-4xl font-bold mb-4 text-center text-black z-10">🏝️ Bradesco Seguros — Evento Corporativo </h1>
 
             <p className="text-lg text-center mb-6 max-w-2xl  text-black z-10">

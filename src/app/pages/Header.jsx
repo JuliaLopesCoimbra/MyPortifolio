@@ -16,7 +16,7 @@ export default function Header({ showHeader }) {
           <ul className="flex space-x-4">
             <li>
               <a
-                href="/"
+                href="/pages/projects"
                 className="hover:underline bg-black bg-opacity-10 rounded p-2 hover:bg-gray-500 hover:text-white transition duration-300"
               >
                 Projetos
@@ -24,7 +24,7 @@ export default function Header({ showHeader }) {
             </li>
             <li>
               <a
-                href="/home"
+                href="#about"
                 className="hover:underline bg-black bg-opacity-10 rounded p-2 hover:bg-gray-500 hover:text-white transition duration-300"
               >
                 Sobre
@@ -32,7 +32,7 @@ export default function Header({ showHeader }) {
             </li>
             <li>
               <a
-                href="/"
+                href="#contact"
                 className="hover:underline bg-black bg-opacity-10 rounded p-2 hover:bg-gray-500 hover:text-white transition duration-300"
               >
                 Contato

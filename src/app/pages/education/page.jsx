@@ -5,7 +5,7 @@ export default function Education() {
   const router = useRouter();
   return (
     <div className="bg-gray-100  sm:py-8">
-      <div className="absolute top-10 left-10 p-4 z-10">
+      <div className="absolute top-10 left-5 p-4 z-10">
         <button
           onClick={() => router.back()}
           className="text-gray-700 hover:text-gray-900"

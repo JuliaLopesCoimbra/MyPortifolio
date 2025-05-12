@@ -55,7 +55,7 @@ export function About() {
               </p>
               <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">Um pouco da minha vida pessoal.</h2>
               <p className="mt-6">
-                Fora das salas de aula e do mundo da programação, tenho uma vida pessoal recheada de atividades que me energizam e me inspiram. Sou uma entusiasta dos esportes, e a corrida ocupa um lugar especial em meu coração. Participei de uma meia maratona, completando os desafiadores 21 km, uma experiência que testou meus limites e reforçou minha resiliência.
+                Fora das salas de aula e do mundo da programação, tenho uma vida pessoal recheada de atividades que me energizam e me inspiram. Sou uma entusiasta dos esportes, e a corrida ocupa um lugar especial em meu coração. Já completei os desafiadores 20 km, uma experiência que testou meus limites e reforçou minha resiliência.
               </p>
               <br></br>
               <p>
@@ -79,6 +79,7 @@ export function About() {
                 Agora que minha pesquisa está finalizada, meu objetivo é entrar no mercado de trabalho em uma vaga onde eu possa aplicar meu conhecimento e crescer profissionalmente.
                 </p> */}
               <br></br>
+              
               <p>Você pode visitar meu <a className='font-bold' href='https://www.linkedin.com/in/júlia-lopes-12648624a/'>LinkedIn</a> ou meu <a className='font-bold' href='https://github.com/JuliaLopesCoimbra'>GitHub</a></p>
             </div>
           </div>

@@ -28,7 +28,7 @@ export default function BraskemRockInRioProject() {
   <rect width="100%" height="100%" strokeWidth={0} fill="url(#grid-pattern)" />
 </svg>
 </div>
-         <div className="absolute top-10 left-10 p-4 z-10">
+         <div className="absolute top-10 left-0 p-4 z-10">
         <button
           onClick={() => router.back()}
           className="text-black hover:text-purple-500"

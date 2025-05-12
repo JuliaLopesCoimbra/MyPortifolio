@@ -6,7 +6,7 @@ export default function DisneyProject() {
      const router = useRouter();
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-white p-8"   style={{ backgroundImage: `url('/img/fundo/fundodisney.png')`, backgroundSize: 'cover' }}>
-         <div className="absolute top-10 left-10 p-4 z-10">
+         <div className="absolute top-10 left-0 p-4 z-10">
         <button
           onClick={() => router.back()}
           className="text-white hover:text-purple-500"

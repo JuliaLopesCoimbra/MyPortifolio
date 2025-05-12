@@ -5,7 +5,7 @@ import Header from "./pages/Header";
 import {About}  from "./pages/About";
 import Dashboard from "./pages/Dashboard";
 import Contact from "./pages/Contact";
-
+import Stack from "./pages/Stack";
 export default function Home() {
   const [showHeader, setShowHeader] = useState(false);
 
@@ -54,13 +54,16 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section >
+      <section id="about">
        <About />
       </section>
       <section >
         <Dashboard />
       </section>
-      <section>
+      <section className="w-full h-screen pl-10 pr-10 pb-10 bg-white">
+        <Stack />
+      </section>
+      <section id="contact" className="pt-10 bg-white">
         <Contact />
       </section>
     </div>

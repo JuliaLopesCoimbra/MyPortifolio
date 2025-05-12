@@ -38,7 +38,7 @@ const Example = () => {
   return (
     <div className="w-full   bg-white" >
 
-      <div className="absolute top-10 left-10 p-4 z-10">
+      <div className="absolute top-10 left-0 p-4 z-10">
         <button
           onClick={() => router.back()}
           className="text-white hover:text-purple-500"
